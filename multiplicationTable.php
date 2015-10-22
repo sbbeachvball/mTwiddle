@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<style>
+<html><head><style>
 table {
     border: 2px solid blue;
     border-collapse: collapse;
+}
+tr { 
+    padding: 0; 
+    margin: 6px; 
+    margin-bottom: 16px; 
+    border: 1px solid black; 
 }
 td {
     border: 1px solid blue;
@@ -13,8 +16,8 @@ td {
     font-family: helvetica, arial, sans-serif;
     width: 60px;
     text-align: center;
+    margin: 2px; 
 }
-
 .bg- {
     background-color: none;
 }
@@ -37,28 +40,14 @@ td {
     background-color: #fca;
 }
 </style>
-</head>
-<body>
+</head></body>
+<table>
+<?php  
 
-<?php
 require_once('colorClassGen.php');
 $choices = array('','r','','b','','y');
 $ccg = new colorClassGen($choices,$choices);
 $ccg->setPrefix("bg-");
-
-///print $ccg->get(0,1 ) . "<br>\n";
-///print $ccg->get(1,0 ) . "<br>\n";
-///print $ccg->get(2,1 ) . "<br>\n";
-///print $ccg->get(0,2 ) . "<br>\n";
-///print $ccg->get(8,3 ) . "<br>\n";
-///print $ccg->get(0,5 ) . "<br>\n";
-///print $ccg->get(0,5 ) . "<br>\n";
-///print $ccg->get(0,5 ) . "<br>\n";
-///print $ccg->get(5,5 ) . "<br>\n";
-///print $ccg->get(7,5 ) . "<br>\n";
-///print $ccg->get(9,5 ) . "<br>\n";
-///print $ccg->get(7,9 ) . "<br>\n";
-///print $ccg->get(11,9) . "<br>\n";
 
 print "<table>\n";
 for($i=0; $i < 12; $i++){
@@ -71,8 +60,6 @@ for($i=0; $i < 12; $i++){
     print "<tr>\n";
 }
 print "</table>\n";
-
 ?>
-
-</body>
-</html>
+</table>
+</body></html>

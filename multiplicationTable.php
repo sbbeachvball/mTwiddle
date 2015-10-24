@@ -18,27 +18,62 @@ td {
     text-align: center;
     margin: 2px; 
 }
-.bg- {
-    background-color: none;
+
+<?php
+$bcolors = array( 
+    ''   => 'none',
+    'r'  => '#f00',
+    'y'  => '#ff0',
+    'b'  => '#46f',
+    'br' => '#c0f',
+    'by' => '#0f0',
+    'ry' => '#f60',
+    );
+$lcolors = array(
+    ''   => 'none',
+    'r'  => '#fac',
+    'y'  => '#ffa',
+    'b'  => '#bdf',
+    'br' => '#caf',
+    'by' => '#cfc',
+    'ry' => '#fca',
+    );
+
+foreach( $lcolors as $k => $v){
+    print ".bg-" . $k . "{\n";
+    print "    background-color: $v;\n";
+    print "}\n";
 }
-.bg-r {
-    background-color: #fac;
-}
-.bg-y {
-    background-color: #ffa;
-}
-.bg-b {
-    background-color: #bdf;
-}
-.bg-br {
-    background-color: #faf;
-}
-.bg-by {
-    background-color: #cfc;
-}
-.bg-ry {
-    background-color: #fca;
-}
+///.bg- {
+///    background-color: none;
+///}
+///.bg-r {
+///    /*
+///    background-color: #fac;
+///    background-color: #ffa;
+///    background-color: #bdf;
+///    background-color: #caf;
+///    background-color: #cfc;
+///    background-color: #fca;
+///    */
+///    background-color: #f00;
+///}
+///.bg-y {
+///    background-color: #ff0;
+///}
+///.bg-b {
+///    background-color: #46f;
+///}
+///.bg-br {
+///    background-color: #c0f;
+///}
+///.bg-by {
+///    background-color: #0f0;
+///}
+///.bg-ry {
+///    background-color: #f60;
+///}
+?>
 </style>
 </head></body>
 <table>
